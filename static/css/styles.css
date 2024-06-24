@@ -6,6 +6,7 @@
     --clr-neu-middle: hsl(0, 0%, 20%);
     --clr-neu-dark: hsl(0, 0%, 12%);
     --clr-neu-darkest: hsl(0, 0%, 8%);
+    --clr-shd: rgba(0, 0, 0, 0.2);
 
     --fw-normal: 400;
     --fw-bold: 600;
@@ -19,6 +20,8 @@
 html {
     font-family: "Inter", sans-serif;
     font-size: 0, 875rem; /* Base 14px */
+    color: var(--clr-neu-light);
+    font-weight: var(--fw-normal);
 }
 
 /* Main */
@@ -26,4 +29,81 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+    background: var(--clr-neu-darkest);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+main {
+    background: var(--clr-neu-dark);
+    width: 100%;
+    text-align: center;
+    padding: 1.25rem 1rem 0.5rem;
+    box-shadow: 0 0.25rem 0.25rem var(--clr-shd);
+    border-radius: 0.5rem;
+}
+
+.avatar {
+    box-shadow: 0 0.25rem 0.25rem var(--clr-shd);
+    border-radius: 100%;
+    max-width: 6rem;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-weight: var(--fw-bolder);
+    margin: 0;
+}
+
+.country {
+    margin: 0.75rem 0;
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary);
+}
+
+.title {
+    margin: 1.5rem 0;
+}
+
+.links {
+    margin: 0;
+    padding: 0;
+}
+
+.links a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.links li {
+    width: 100%;
+    background-color: var(--clr-neu-middle);
+    margin-bottom: 1rem;
+    padding: 0.75em;
+    list-style-type: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.25rem var(--clr-shd);
+    font-weight: var(--fw-bold);
+}
+
+/* Attribution */
+
+footer {
+    position: fixed;
+    left: 50%;
+    bottom: 0.5rem;
+    font-size: 0.7rem;
+    translate: -50% 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--clr-primary);
+    transition: all 200ms ease-out;
+}
+
+footer a:is(:hover, :focus-visible) {
+    opacity: 0.7;
 }
