@@ -37,12 +37,13 @@ body {
 }
 
 main {
-    background: var(--clr-neu-dark);
     width: 100%;
+    max-width: 25rem;
     text-align: center;
     padding: 1.25rem 1rem 0.5rem;
     box-shadow: 0 0.25rem 0.25rem var(--clr-shd);
     border-radius: 0.5rem;
+    background: var(--clr-neu-dark);
 }
 
 .avatar {
